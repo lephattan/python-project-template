@@ -1,3 +1,32 @@
+[project]
+name = "project_name"
+dynamic = ["version"]
+dependencies = [ ]
+authors = [
+  {name = "Tan Le"},
+]
+description = "project description"
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = [
+  'flake8>=6',
+  'pytest>=7.2.2',
+]
+
+[project.scripts]
+project_name-cli = 'project_name.cli:main'
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "testing*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "project_name.VERSION"}
+
 [tool.black]
 line-length = 88
 target-version = ['py38']
