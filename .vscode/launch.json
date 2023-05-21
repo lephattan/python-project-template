@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "python",
+      "request": "launch",
+      "args": [],
+      "name": "Launch module",
+      "env": {},
+      "cwd": "${workspaceFolder}",
+      "module": "moduleName"
+    },
+    {
+      "type": "python",
+      "request": "launch",
+      "args": [],
+      "name": "Launch file",
+      "env": {},
+      "cwd": "${workspaceFolder}",
+      "program": "filename.py"
+    }
+  ]
+}
